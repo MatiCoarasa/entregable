@@ -13,15 +13,19 @@ import java.util.List;
  * Created by digitalhouse on 17/10/16.
  */
 public class AdapterRecetasRecycler extends RecyclerView.Adapter{
-    Context context;
-    List<Receta> listaRecetas;
+    private Context context;
+    private List<Receta> listaRecetas;
+
+    public AdapterRecetasRecycler(List<Receta> listaRecetas, Context context) {
+        this.listaRecetas = listaRecetas;
+        this.context = context;
+    }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.lista_recetas_detalle, parent, false);
-        RecetasViewHolder recetasViewHolder = new RecetasViewHolder(view);
-        return recetasViewHolder;
+        return new RecetasViewHolder(view);
     }
 
     @Override
