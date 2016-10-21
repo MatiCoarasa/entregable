@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -42,17 +43,16 @@ public class AdapterRecetasRecycler extends RecyclerView.Adapter{
 
     private class RecetasViewHolder extends RecyclerView.ViewHolder{
         TextView nombreReceta;
-        TextView descripcionReceta;
-
+        ImageView imagenReceta;
 
         public RecetasViewHolder(View itemView) {
             super(itemView);
             nombreReceta = (TextView)itemView.findViewById(R.id.textView_tituloDetalle);
-            descripcionReceta = (TextView)itemView.findViewById(R.id.textView_descripcionDetalle);
+            imagenReceta = (ImageView)itemView.findViewById(R.id.imageView_receta);
         }
         public void cargarReceta(Receta receta){
             nombreReceta.setText(receta.getNombre());
-            descripcionReceta.setText(receta.getDescripcion());
+            imagenReceta.setImageResource(receta.getImagen());
         }
     }
 }

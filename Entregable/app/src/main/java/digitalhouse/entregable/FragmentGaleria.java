@@ -31,7 +31,7 @@ public class FragmentGaleria extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_galeria, container, false);
 
-        ImageView fondo = (ImageView)view.findViewById(R.id.imageView_imagen);
+        ImageView fondo = (ImageView)view.findViewById(R.id.imageView_restaurante);
         Bundle bundle = getArguments();
         int imagenFondo = bundle.getInt(KEY_IMAGEN);
 

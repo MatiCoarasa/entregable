@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
 
-    <ImageView
-        android:layout_width="130dp"
-        android:layout_height="90dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="90dp"
+            android:src="@drawable/receta_fideos_caseros"
+            android:scaleType="centerCrop"
+            android:id="@+id/imageView_receta"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="NOMBRE RECETA"
-            android:textSize="30sp"
-            android:id="@+id/textView_tituloDetalle"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="descripcion"
-            android:id="@+id/textView_descripcionDetalle"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NOMBRE RECETA"
+                android:textSize="30sp"
+                android:id="@+id/textView_tituloDetalle"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
     </LinearLayout>
-
-
-
-
-
-</LinearLayout>

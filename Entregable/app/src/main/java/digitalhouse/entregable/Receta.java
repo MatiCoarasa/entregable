@@ -9,21 +9,17 @@ import java.util.List;
 public class Receta {
 
     private String nombre;
-    private String descripcion;
     private List<String> ingredientesRequeridos;
+    private int imagen;
 
-    public Receta(String nombre, String descripcion) {
+    public Receta(String nombre, int imagen) {
         this.nombre = nombre;
-        this.descripcion = descripcion;
+        this.imagen = imagen;
         ingredientesRequeridos = new ArrayList<>();
     }
 
     public String getNombre() {
         return nombre;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
     }
 
     public void agregarIngrediente(String ingrediente){
@@ -32,5 +28,9 @@ public class Receta {
 
     public List<String> getIngredientesRequeridos() {
         return ingredientesRequeridos;
+    }
+
+    public int getImagen() {
+        return imagen;
     }
 }
