@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detalle_receta"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="digitalhouse.entregable.ActivityDetalleReceta">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff5252"/>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:src="@color/cardview_dark_background"
+            android:layout_gravity="center"
+            android:id="@+id/activityDetalle_imagen"
+            android:scaleType="centerCrop"/>
+
+    </FrameLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="nombre"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:id="@+id/activityDetalle_nombre"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:background="#509c27b0"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#7cd7ccc8"/>
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/activityDetalle_receta"/>
+        </ScrollView>
+    </FrameLayout>
+
+
+</LinearLayout>

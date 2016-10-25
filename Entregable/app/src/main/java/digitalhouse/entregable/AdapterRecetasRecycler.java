@@ -13,19 +13,29 @@ import java.util.List;
 /**
  * Created by digitalhouse on 17/10/16.
  */
-public class AdapterRecetasRecycler extends RecyclerView.Adapter{
+public class AdapterRecetasRecycler extends RecyclerView.Adapter implements View.OnClickListener{
     private Context context;
     private List<Receta> listaRecetas;
+    private View.OnClickListener listener;
 
     public AdapterRecetasRecycler(List<Receta> listaRecetas, Context context) {
         this.listaRecetas = listaRecetas;
         this.context = context;
     }
 
+    public void setOnClickListener(View.OnClickListener listener){
+        this.listener = listener;
+    }
+
+    public List<Receta> getListaRecetas() {
+        return listaRecetas;
+    }
+
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.lista_recetas_detalle, parent, false);
+        view.setOnClickListener(this);
         return new RecetasViewHolder(view);
     }
 
@@ -39,6 +49,11 @@ public class AdapterRecetasRecycler extends RecyclerView.Adapter{
     @Override
     public int getItemCount() {
         return listaRecetas.size();
+    }
+
+    @Override
+    public void onClick(View view) {
+        listener.onClick(view);
     }
 
     private class RecetasViewHolder extends RecyclerView.ViewHolder{
