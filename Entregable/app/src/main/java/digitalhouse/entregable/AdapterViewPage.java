@@ -18,14 +18,14 @@ public class AdapterViewPage extends FragmentStatePagerAdapter {
     public AdapterViewPage(FragmentManager fm) {
         super(fm);
         listaFragments = new ArrayList<>();
-        listaFragments.add(FragmentGaleria.crearFragment(R.drawable.astridygaston));
-        listaFragments.add(FragmentGaleria.crearFragment(R.drawable.borago));
-        listaFragments.add(FragmentGaleria.crearFragment(R.drawable.central));
-        listaFragments.add(FragmentGaleria.crearFragment(R.drawable.dom));
-        listaFragments.add(FragmentGaleria.crearFragment(R.drawable.maido));
-        listaFragments.add(FragmentGaleria.crearFragment(R.drawable.mani));
-        listaFragments.add(FragmentGaleria.crearFragment(R.drawable.quintonil));
-        listaFragments.add(FragmentGaleria.crearFragment(R.drawable.tegui));
+        listaFragments.add(FragmentGaleria.crearFragment("Astrid y Gastón", "Lima, Perú", R.drawable.astridygaston));
+        listaFragments.add(FragmentGaleria.crearFragment("Boragó", "Santiago, Chile",R.drawable.borago));
+        listaFragments.add(FragmentGaleria.crearFragment("Central", "Lima, Perú", R.drawable.central));
+        listaFragments.add(FragmentGaleria.crearFragment("D.O.M.", "San Pablo, Brasil", R.drawable.dom));
+        listaFragments.add(FragmentGaleria.crearFragment("Maido", "Lima, Perú", R.drawable.maido));
+        listaFragments.add(FragmentGaleria.crearFragment("Maní", "San Pablo, Brasil", R.drawable.mani));
+        listaFragments.add(FragmentGaleria.crearFragment("Quintonil", "Ciudad de México", R.drawable.quintonil));
+        listaFragments.add(FragmentGaleria.crearFragment("Tegui", "Buenos Aires, Argentina", R.drawable.tegui));
     }
 
     @Override
